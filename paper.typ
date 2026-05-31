@@ -395,7 +395,7 @@
 
 *运行方法*：
 ```bash
-uv init
+uv sync
 uv run python main.py
 ```
 
