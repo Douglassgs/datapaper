@@ -1,0 +1,153 @@
+<mxfile host="Electron">
+  <diagram id="Hhu2Gjs2o_EdwRCrzF1A" name="第 1 页">
+    <mxGraphModel dx="1264" dy="760" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="main_title" parent="1" style="text;fontSize=20;fontStyle=1;align=center;fillColor=#2c3e50;strokeColor=#1a252f;fontColor=#ffffff;rounded=1;" value="全球碳排放与能源结构时空可视化分析框架" vertex="1">
+          <mxGeometry height="40" width="560" x="120" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="data_layer_label" parent="1" style="text;fontSize=13;fontStyle=1;align=center;fillColor=#f0f0f0;strokeColor=#999;rounded=1;fontColor=#555;" value="数 据 层" vertex="1">
+          <mxGeometry height="24" width="720" x="40" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="data_owid" parent="1" style="shape=cylinder3;boundedLbl=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;size=0.15;" value="OWID CO₂ 数据集&#xa;owid-co2-data.csv&#xa;79 个字段 | 1990–2024 | 国家-年份主键" vertex="1">
+          <mxGeometry height="65" width="230" x="100" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="data_wb" parent="1" style="shape=cylinder3;boundedLbl=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;size=0.15;" value="World Bank SSP 人口预测&#xa;pop-x1_timeseries_*.xlsx&#xa;24+ sheet | SSP1–SSP5 | 2010–2100" vertex="1">
+          <mxGeometry height="65" width="230" x="470" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow_data_center" edge="1" parent="1" source="data_owid" style="endArrow=classic;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="analysis_box" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="215" y="170" as="sourcePoint" />
+            <mxPoint x="400" y="195" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow_data_center2" edge="1" parent="1" source="data_wb" style="endArrow=classic;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="analysis_box" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="585" y="170" as="sourcePoint" />
+            <mxPoint x="400" y="195" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="analysis_box" parent="1" style="rounded=1;fillColor=#fafafa;strokeColor=#bbb;strokeWidth=1;dashed=1;" value="" vertex="1">
+          <mxGeometry height="100" width="720" x="40" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="analysis_label" parent="1" style="text;fontSize=11;fontStyle=1;align=center;fillColor=#e8e8e8;strokeColor=#bbb;rounded=1;fontColor=#555;" value="分 析 维 度" vertex="1">
+          <mxGeometry height="20" width="720" x="40" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="dim_time" parent="1" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;align=center;" value="⏳ 时间维度&#xa;1990–2024 年时序演变分析" vertex="1">
+          <mxGeometry height="55" width="200" x="70" y="225" as="geometry" />
+        </mxCell>
+        <mxCell id="dim_space" parent="1" style="rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;align=center;" value="🌍 空间维度&#xa;12 国对比 + 全球分布格局" vertex="1">
+          <mxGeometry height="55" width="200" x="300" y="225" as="geometry" />
+        </mxCell>
+        <mxCell id="dim_st" parent="1" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;align=center;" value="🔗 时空融合&#xa;发展轨迹 + 未来情景预测" vertex="1">
+          <mxGeometry height="55" width="200" x="530" y="225" as="geometry" />
+        </mxCell>
+        <mxCell id="dim_arrow1" edge="1" parent="1" source="dim_time" style="endArrow=classic;startArrow=classic;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#999;" target="dim_space" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dim_arrow2" edge="1" parent="1" source="dim_space" style="endArrow=classic;startArrow=classic;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#999;" target="dim_st" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="method_layer_label" parent="1" style="text;fontSize=11;fontStyle=1;align=center;fillColor=#e8e8e8;strokeColor=#bbb;rounded=1;fontColor=#555;" value="分 析 方 法" vertex="1">
+          <mxGeometry height="20" width="720" x="40" y="315" as="geometry" />
+        </mxCell>
+        <mxCell id="method_time" parent="1" style="rounded=0;fillColor=#fffde6;strokeColor=#d6b656;fontSize=9;align=left;verticalAlign=top;" value="时间序列分析&#xa;• 趋势线绘制 (折线图)&#xa;• 5年滑动平均平滑&#xa;• 堆叠面积图分解&#xa;• 排名动态变化&#xa;• 断轴可视化技术" vertex="1">
+          <mxGeometry height="95" width="220" x="50" y="345" as="geometry" />
+        </mxCell>
+        <mxCell id="method_space" parent="1" style="rounded=0;fillColor=#f3eaf7;strokeColor=#9673a6;fontSize=9;align=left;verticalAlign=top;" value="空间对比分析&#xa;• 横向柱状图对比&#xa;• 横向条形图排名&#xa;• Choropleth 地图&#xa;• 堆叠柱状图结构&#xa;• 多国面板可视化" vertex="1">
+          <mxGeometry height="95" width="220" x="290" y="345" as="geometry" />
+        </mxCell>
+        <mxCell id="method_st" parent="1" style="rounded=0;fillColor=#eaf5ea;strokeColor=#82b366;fontSize=9;align=left;verticalAlign=top;" value="关联与预测分析&#xa;• 对数散点气泡图&#xa;• 脱钩指数构建&#xa;• SSP 情景对比&#xa;• 交互式可视化&#xa;• 碳排放强度分析" vertex="1">
+          <mxGeometry height="95" width="220" x="530" y="345" as="geometry" />
+        </mxCell>
+        <mxCell id="output_layer_label" parent="1" style="text;fontSize=11;fontStyle=1;align=center;fillColor=#e8e8e8;strokeColor=#bbb;rounded=1;fontColor=#555;" value="图 表 输 出（8 张）" vertex="1">
+          <mxGeometry height="20" width="720" x="40" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="fig_group_time" parent="1" style="rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;fontStyle=1;align=center;verticalAlign=top;" value="时间序列分析图表" vertex="1">
+          <mxGeometry height="170" width="230" x="40" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="fig1_card" parent="1" style="rounded=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=9;align=center;" value="图1&#xa;CO₂排放总量时序图&#xa;折线图 · 12国+全球 · 断轴" vertex="1">
+          <mxGeometry height="32" width="210" x="50" y="515" as="geometry" />
+        </mxCell>
+        <mxCell id="fig2_card" parent="1" style="rounded=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=9;align=center;" value="图2&#xa;人均CO₂排放时序图&#xa;折线图 · 12国+全球均值" vertex="1">
+          <mxGeometry height="32" width="210" x="50" y="552" as="geometry" />
+        </mxCell>
+        <mxCell id="fig3_card" parent="1" style="rounded=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=9;align=center;" value="图3&#xa;全球CO₂排放源构成变化&#xa;堆叠面积图 · 5类排放源" vertex="1">
+          <mxGeometry height="32" width="210" x="50" y="589" as="geometry" />
+        </mxCell>
+        <mxCell id="fig6_card" parent="1" style="rounded=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=9;align=center;" value="图6&#xa;Top15 排放国排名变化&#xa;横向条形图 · 5个快照年份" vertex="1">
+          <mxGeometry height="30" width="210" x="50" y="624" as="geometry" />
+        </mxCell>
+        <mxCell id="fig_group_space" parent="1" style="rounded=0;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;fontStyle=1;align=center;verticalAlign=top;" value="空间分布分析图表" vertex="1">
+          <mxGeometry height="170" width="230" x="285" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="fig5_card" parent="1" style="rounded=1;fillColor=#d4e1f5;strokeColor=#1ba1e2;fontSize=9;align=center;" value="图5&#xa;全球人均CO₂空间分布&#xa;Plotly 交互地图 · Choropleth" vertex="1">
+          <mxGeometry height="32" width="210" x="295" y="515" as="geometry" />
+        </mxCell>
+        <mxCell id="fig7_card" parent="1" style="rounded=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=9;align=center;" value="图7&#xa;重点国家能源结构对比&#xa;堆叠柱状图 · 5类能源占比" vertex="1">
+          <mxGeometry height="32" width="210" x="295" y="555" as="geometry" />
+        </mxCell>
+        <mxCell id="spatial_note" parent="1" style="rounded=0;fillColor=#fafafa;strokeColor=#ddd;fontSize=8;align=center;" value="空间维度展示：国别差异、全球格局、结构对比" vertex="1">
+          <mxGeometry height="35" width="210" x="295" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="fig_group_st" parent="1" style="rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;fontStyle=1;align=center;verticalAlign=top;" value="时空融合 + 预测图表" vertex="1">
+          <mxGeometry height="170" width="230" x="530" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="fig4_card" parent="1" style="rounded=1;fillColor=#d4e1f5;strokeColor=#1ba1e2;fontSize=9;align=center;" value="图4&#xa;GDP与CO₂关系气泡图&#xa;Plotly 交互气泡图 · 对数尺度" vertex="1">
+          <mxGeometry height="32" width="210" x="540" y="515" as="geometry" />
+        </mxCell>
+        <mxCell id="fig8_card" parent="1" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9;align=center;" value="图8&#xa;SSP情景人口预测对比&#xa;多情景折线图 · SSP1-SSP5" vertex="1">
+          <mxGeometry height="32" width="210" x="540" y="555" as="geometry" />
+        </mxCell>
+        <mxCell id="st_note" parent="1" style="rounded=0;fillColor=#fafafa;strokeColor=#ddd;fontSize=8;align=center;" value="发展轨迹关联 + 排放强度+ 气候变化情景预测" vertex="1">
+          <mxGeometry height="35" width="210" x="540" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="conn_t1" edge="1" parent="1" source="dim_time" style="endArrow=classic;exitX=0.5;exitY=1;strokeColor=#d6b656;dashed=1;" target="method_time" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="150" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn_s1" edge="1" parent="1" source="dim_space" style="endArrow=classic;exitX=0.5;exitY=1;strokeColor=#9673a6;dashed=1;" target="method_space" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn_st1" edge="1" parent="1" source="dim_st" style="endArrow=classic;exitX=0.5;exitY=1;strokeColor=#82b366;dashed=1;" target="method_st" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tool_label" parent="1" style="text;fontSize=11;fontStyle=1;align=center;fillColor=#e8e8e8;strokeColor=#bbb;rounded=1;fontColor=#555;" value="工 具 链" vertex="1">
+          <mxGeometry height="20" width="720" x="40" y="675" as="geometry" />
+        </mxCell>
+        <mxCell id="tool_python" parent="1" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=9;align=center;" value="Python&#xa;pandas · numpy" vertex="1">
+          <mxGeometry height="36" width="120" x="105" y="702" as="geometry" />
+        </mxCell>
+        <mxCell id="tool_mpl" parent="1" style="rounded=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=9;align=center;" value="Matplotlib&#xa;静态图 (SVG/PNG)" vertex="1">
+          <mxGeometry height="36" width="130" x="240" y="702" as="geometry" />
+        </mxCell>
+        <mxCell id="tool_plotly" parent="1" style="rounded=1;fillColor=#d4e1f5;strokeColor=#1ba1e2;fontSize=9;align=center;" value="Plotly&#xa;交互图 (HTML)" vertex="1">
+          <mxGeometry height="36" width="130" x="385" y="702" as="geometry" />
+        </mxCell>
+        <mxCell id="tool_seaborn" parent="1" style="rounded=1;fillColor=#f3eaf7;strokeColor=#9673a6;fontSize=9;align=center;" value="Seaborn&#xa;统计可视化" vertex="1">
+          <mxGeometry height="36" width="110" x="530" y="702" as="geometry" />
+        </mxCell>
+        <mxCell id="dF4EX786-2yLYEocYBLS-2" edge="1" parent="1" source="method_time" style="endArrow=classic;strokeColor=#d6b656;dashed=1;" target="fig_group_time" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="146" y="395" as="sourcePoint" />
+            <mxPoint x="140" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dF4EX786-2yLYEocYBLS-3" edge="1" parent="1" source="method_space" style="endArrow=classic;strokeColor=#9673a6;dashed=1;" target="fig_group_space" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="390" y="300" as="sourcePoint" />
+            <mxPoint x="390" y="365" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dF4EX786-2yLYEocYBLS-4" edge="1" parent="1" source="method_st" style="endArrow=classic;strokeColor=#82b366;dashed=1;" target="fig_group_st" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="290" as="sourcePoint" />
+            <mxPoint x="636" y="355" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

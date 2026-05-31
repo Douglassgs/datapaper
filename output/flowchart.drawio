@@ -1,0 +1,170 @@
+<mxGraphModel>
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+
+    <!-- 标题 -->
+    <mxCell id="title" value="全球碳排放与能源结构时空可视化分析 — 流程图" style="text;html=1;fontSize=18;fontStyle=1;align=center;fillColor=none;" vertex="1" parent="1">
+      <mxGeometry x="120" y="10" width="560" height="35" as="geometry"/>
+    </mxCell>
+
+    <!-- ===== 主流程：左侧 Step 1-7 ===== -->
+
+    <!-- Step 1: 加载数据 -->
+    <mxCell id="step1" value="1. 加载数据&#xa;load_owid_data() → classify_locations()" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+      <mxGeometry x="40" y="65" width="220" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- Step 2: 数据清洗 -->
+    <mxCell id="step2" value="2. 数据清洗&#xa;check_duplicates() + detect_outliers()" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+      <mxGeometry x="40" y="145" width="220" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- Step 3: 特征构建 -->
+    <mxCell id="step3" value="3. 特征构建&#xa;clean_country_data() → build_features()" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+      <mxGeometry x="40" y="225" width="220" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- Step 4: matplotlib 图表 -->
+    <mxCell id="step4" value="4. 生成 matplotlib 静态图表" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+      <mxGeometry x="40" y="305" width="220" height="45" as="geometry"/>
+    </mxCell>
+
+    <!-- Step 5: plotly 图表 -->
+    <mxCell id="step5" value="5. 生成 plotly 交互图表" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+      <mxGeometry x="40" y="380" width="220" height="45" as="geometry"/>
+    </mxCell>
+
+    <!-- Step 6: 补充数据 -->
+    <mxCell id="step6" value="6. 处理 World Bank 气候风险数据&#xa;load_worldbank_data()" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+      <mxGeometry x="40" y="455" width="220" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- Step 7: 完成 -->
+    <mxCell id="step7" value="7. 完成 ✓" style="rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+      <mxGeometry x="40" y="535" width="220" height="40" as="geometry"/>
+    </mxCell>
+
+    <!-- ===== 主流程箭头 ===== -->
+    <mxCell id="arrow1-2" style="endArrow=classic;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="step1" target="step2">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="arrow2-3" style="endArrow=classic;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="step2" target="step3">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="arrow3-4" style="endArrow=classic;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="step3" target="step4">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="arrow4-5" style="endArrow=classic;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="step4" target="step5">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="arrow5-6" style="endArrow=classic;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="step5" target="step6">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="arrow6-7" style="endArrow=classic;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="step6" target="step7">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- ===== 右侧：数据输入 ===== -->
+    <mxCell id="data_owid" value="📄 OWID CO₂ 数据集&#xa;(owid-co2-data.csv)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#f5f5f5;strokeColor=#666;fontSize=10;size=0.15;" vertex="1" parent="1">
+      <mxGeometry x="320" y="60" width="160" height="60" as="geometry"/>
+    </mxCell>
+    <mxCell id="arrow_data1" style="endArrow=classic;dashed=1;exitX=1;exitY=0.5;entryX=0;entryY=0.3;" edge="1" parent="1" source="step1" target="data_owid">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- ===== 右侧：Step 4 输出 —— 5 张 matplotlib 图 ===== -->
+    <mxCell id="figs_group" value="📊 matplotlib 静态图表 (PNG/SVG)" style="rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;fontStyle=1;align=center;verticalAlign=top;" vertex="1" parent="1">
+      <mxGeometry x="320" y="170" width="440" height="190" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="fig1" value="图1: CO₂排放总量时序图&#xa;fig1_co2_trend()" style="rounded=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=9;align=center;" vertex="1" parent="1">
+      <mxGeometry x="335" y="200" width="195" height="40" as="geometry"/>
+    </mxCell>
+    <mxCell id="fig2" value="图2: 人均CO₂排放时序图&#xa;fig2_co2_per_capita()" style="rounded=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=9;align=center;" vertex="1" parent="1">
+      <mxGeometry x="545" y="200" width="200" height="40" as="geometry"/>
+    </mxCell>
+    <mxCell id="fig3" value="图3: CO₂排放源构成&#xa;fig3_energy_source()" style="rounded=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=9;align=center;" vertex="1" parent="1">
+      <mxGeometry x="335" y="250" width="195" height="40" as="geometry"/>
+    </mxCell>
+    <mxCell id="fig6" value="图6: Top15排放国排名变化&#xa;fig6_ranking()" style="rounded=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=9;align=center;" vertex="1" parent="1">
+      <mxGeometry x="545" y="250" width="200" height="40" as="geometry"/>
+    </mxCell>
+    <mxCell id="fig7" value="图7: 能源结构对比&#xa;fig7_energy_structure()" style="rounded=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=9;align=center;" vertex="1" parent="1">
+      <mxGeometry x="335" y="305" width="195" height="40" as="geometry"/>
+    </mxCell>
+
+    <!-- Step4 → figs_group 箭头 -->
+    <mxCell id="arrow4-figs" style="endArrow=classic;exitX=1;exitY=0.5;entryX=0;entryY=0.15;curved=1;" edge="1" parent="1" source="step4" target="figs_group">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- ===== 右侧：Step 5 输出 —— 2 张 plotly 图 ===== -->
+    <mxCell id="plotly_group" value="🌐 plotly 交互图表 (HTML)" style="rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;fontStyle=1;align=center;verticalAlign=top;" vertex="1" parent="1">
+      <mxGeometry x="320" y="380" width="440" height="85" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="fig4" value="图4: GDP与CO₂关系气泡图&#xa;fig4_gdp_co2_scatter()" style="rounded=1;fillColor=#d4e1f5;strokeColor=#1ba1e2;fontSize=9;align=center;" vertex="1" parent="1">
+      <mxGeometry x="335" y="410" width="195" height="40" as="geometry"/>
+    </mxCell>
+    <mxCell id="fig5" value="图5: 全球人均CO₂空间分布&#xa;fig5_world_map()" style="rounded=1;fillColor=#d4e1f5;strokeColor=#1ba1e2;fontSize=9;align=center;" vertex="1" parent="1">
+      <mxGeometry x="545" y="410" width="200" height="40" as="geometry"/>
+    </mxCell>
+
+    <!-- Step5 → plotly_group 箭头 -->
+    <mxCell id="arrow5-plotly" style="endArrow=classic;exitX=1;exitY=0.5;entryX=0;entryY=0.3;curved=1;" edge="1" parent="1" source="step5" target="plotly_group">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- ===== 右侧：Step 6 ===== -->
+    <mxCell id="data_wb" value="📄 World Bank SSP 人口预测&#xa;(pop-x1_timeseries_*.xlsx)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#f5f5f5;strokeColor=#666;fontSize=10;size=0.15;" vertex="1" parent="1">
+      <mxGeometry x="320" y="490" width="195" height="55" as="geometry"/>
+    </mxCell>
+    <mxCell id="arrow_data2" style="endArrow=classic;dashed=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="step6" target="data_wb">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="fig8" value="图8: SSP情景人口预测对比&#xa;fig8_ssp_population()" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9;align=center;" vertex="1" parent="1">
+      <mxGeometry x="545" y="498" width="200" height="40" as="geometry"/>
+    </mxCell>
+    <mxCell id="arrow6-fig8" style="endArrow=classic;exitX=1;exitY=0.3;entryX=0;entryY=0.5;curved=1;" edge="1" parent="1" source="step6" target="fig8">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- ===== 图例区 ===== -->
+    <mxCell id="legend_box" value="" style="rounded=0;fillColor=#fafafa;strokeColor=#ccc;fontSize=9;align=left;verticalAlign=top;" vertex="1" parent="1">
+      <mxGeometry x="320" y="570" width="440" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="legend1" value="" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=8;" vertex="1" parent="1">
+      <mxGeometry x="325" y="573" width="14" height="14" as="geometry"/>
+    </mxCell>
+    <mxCell id="legend1_text" value="数据处理" style="text;fontSize=9;align=left;" vertex="1" parent="1">
+      <mxGeometry x="343" y="572" width="55" height="16" as="geometry"/>
+    </mxCell>
+    <mxCell id="legend2" value="" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=8;" vertex="1" parent="1">
+      <mxGeometry x="400" y="573" width="14" height="14" as="geometry"/>
+    </mxCell>
+    <mxCell id="legend2_text" value="图表生成" style="text;fontSize=9;align=left;" vertex="1" parent="1">
+      <mxGeometry x="418" y="572" width="55" height="16" as="geometry"/>
+    </mxCell>
+    <mxCell id="legend3" value="" style="rounded=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=8;" vertex="1" parent="1">
+      <mxGeometry x="475" y="573" width="14" height="14" as="geometry"/>
+    </mxCell>
+    <mxCell id="legend3_text" value="matplotlib 图" style="text;fontSize=9;align=left;" vertex="1" parent="1">
+      <mxGeometry x="493" y="572" width="75" height="16" as="geometry"/>
+    </mxCell>
+    <mxCell id="legend4" value="" style="rounded=1;fillColor=#d4e1f5;strokeColor=#1ba1e2;fontSize=8;" vertex="1" parent="1">
+      <mxGeometry x="570" y="573" width="14" height="14" as="geometry"/>
+    </mxCell>
+    <mxCell id="legend4_text" value="plotly 图" style="text;fontSize=9;align=left;" vertex="1" parent="1">
+      <mxGeometry x="588" y="572" width="55" height="16" as="geometry"/>
+    </mxCell>
+    <mxCell id="legend5" value="" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=8;" vertex="1" parent="1">
+      <mxGeometry x="645" y="573" width="14" height="14" as="geometry"/>
+    </mxCell>
+    <mxCell id="legend5_text" value="补充数据图" style="text;fontSize=9;align=left;" vertex="1" parent="1">
+      <mxGeometry x="663" y="572" width="70" height="16" as="geometry"/>
+    </mxCell>
+
+  </root>
+</mxGraphModel>
