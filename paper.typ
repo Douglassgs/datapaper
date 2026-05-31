@@ -18,6 +18,26 @@
 
 #pagebreak()
 
+#set page(numbering: "I")
+#show outline.entry: set block(spacing: 1em)
+
+#outline(
+  title: "目录",        // 目录标题
+  depth: 3,            // 显示层级
+  indent: 1em,         // 层级缩进
+)
+
+#pagebreak()
+
+#outline(
+  title: "图表目录",
+  target: figure,
+)
+
+#pagebreak()
+
+#set page(numbering: "1")
+#counter(page).update(1)
 
 = 项目背景与研究问题
 

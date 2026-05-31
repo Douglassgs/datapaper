@@ -50,6 +50,12 @@ uv run python main.py
 
 3) 生成的图表位于 output/ 目录
 
+4) 编译PDF
+
+```bash
+typst compile paper.typ 
+```
+
 数据说明
 --------
 
